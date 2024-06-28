@@ -1,0 +1,44 @@
+{
+  "name": "html-to-png",
+  "version": "3.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node server",
+    "test": "lab -a @hapi/code -I \"__core-js_shared__,CSS,regeneratorRuntime,core\" -L",
+    "lint": "eslint .",
+    "benchmark": "autocannon \"http://0.0.0.0:3000/render?clientPropertyId=8b3cb731-f5c9-4e96-9508-d5940f5446a4&template=jobboard-basic&logoUrl=https%3A%2F%2Fjobs.theguardian.com%2F_%2Fjobseekers-frontend%2Fassets%2Fimages%2Flogo-small.png&brandFontUrl=https%3A%2F%2Fjobs.theguardian.com%2Fassets%2Fdist%2Fcss%2Ffonts%2Fguardian-2018%2FGHGuardianHeadline-Semibold.ttf&inlineStyles=true&toPng=true\""
+  },
+  "dependencies": {
+    "@hapi/boom": "10.x.x",
+    "@hapi/catbox-object": "^3.0.1",
+    "@hapi/hoek": "^11.0.4",
+    "@hapipal/haute-couture": "4.x.x",
+    "blipp": "^4.0.2",
+    "joi": "17.x.x",
+    "juice": "^10.0.0",
+    "nunjucks": "^3.2.4",
+    "satori": "^0.10.13",
+    "satori-html": "^0.3.2",
+    "sharp": "^0.33.4"
+  },
+  "devDependencies": {
+    "@hapi/code": "9.x.x",
+    "@hapi/eslint-config-hapi": "13.x.x",
+    "@hapi/eslint-plugin-hapi": "4.x.x",
+    "@hapi/glue": "9.x.x",
+    "@hapi/hapi": "21.x.x",
+    "@hapi/inert": "^7.1.0",
+    "@hapi/lab": "25.x.x",
+    "@hapi/vision": "^7.0.3",
+    "@hapipal/confidence": "6.x.x",
+    "@hapipal/hpal": "3.x.x",
+    "@hapipal/hpal-debug": "2.x.x",
+    "@hapipal/toys": "4.x.x",
+    "autocannon": "^7.15.0",
+    "babel-eslint": "10.x.x",
+    "dotenv": "16.x.x",
+    "eslint": "9.x.x",
+    "exiting": "7.x.x",
+    "hapi-swagger": "17.x.x"
+  }
+}

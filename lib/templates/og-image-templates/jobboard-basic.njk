@@ -1,0 +1,33 @@
+{% extends '../base.njk' %}
+
+{% block head %}
+    {{ super() }}
+
+    <style>
+    {{ cssVariables | safe }}
+
+    {% include './jobboard-basic.css' %}
+    </style>
+{% endblock head %}
+
+{% block body %}
+    <div class="body-wrapper">
+        <div class="content">
+            <div class="logo-container">
+                <img class="logo" src="data:{{ logo.mimeType }};base64,{{ logo.base64 }}">
+            </div>
+            <h1 class="title brand-font">
+                {{ job.title | safe }}
+            </h1>
+            <div class="recruiter-meta">
+                <p class="recruiter-detail">
+                    {{ job.company | safe }}
+                </p>
+                <p class="recruiter-detail">
+                {{ job.location | safe }}
+                </p>
+            </div>
+        </div>
+        <footer class="footer"></footer>
+    </div>
+{% endblock body %}
